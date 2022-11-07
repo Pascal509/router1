@@ -17,9 +17,9 @@ class ErrorBoundary extends Component {
         }
     }
 
-    componentDidCatch(error, info) {
-        alert(error)
-        alert(info)
+    componentDidCatch(error, errorInfo) {
+        console.log(error, errorInfo)
+        alert('Logging')
     }
 
   render() {
@@ -30,4 +30,4 @@ class ErrorBoundary extends Component {
   }
 }
 
-export default ErrorBoundary
+export default ErrorBoundary;

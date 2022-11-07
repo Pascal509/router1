@@ -10,7 +10,7 @@ class Users extends Component {
   }
 
   componentDidMount() {
-    fetch("https://randomuser.me/api/?results=50")
+    fetch("https://randomuser.me/api/?results=10")
       .then((response) => response.json())
       .then((response) => {
         this.setState({
@@ -41,3 +41,5 @@ class Users extends Component {
 }
 
 export default Users;
+
+

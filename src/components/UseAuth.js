@@ -3,6 +3,7 @@ import { createContext, useState, useContext} from "react";
 
 
 
+
 const AuthContext = createContext(null);
 
 export const AuthProvider = ({ children }) => {
@@ -10,7 +11,7 @@ export const AuthProvider = ({ children }) => {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
 
-  const LogIn = (value) => {
+  const LogIn = (user) => {
     setUser(user);
     setEmail(email);
     setPassword(password);
@@ -20,7 +21,7 @@ export const AuthProvider = ({ children }) => {
     setEmail(null);
     setPassword(null);
     
-  };
+  }
 
   
   return (

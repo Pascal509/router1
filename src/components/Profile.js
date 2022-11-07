@@ -1,24 +1,45 @@
-import React from 'react'
-import {useAuth} from "./UseAuth"
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import { useAuth } from "./UseAuth";
+import { useNavigate } from "react-router-dom";
+import "./Profile.css";
 
 function Profile() {
-    const auth = useAuth();
-    const navigate = useNavigate();
+  const auth = useAuth();
+  const navigate = useNavigate();
 
-    const handleLogOut = () => {
-        auth.LogOut()
-        navigate('/')
-    }
+  const handleLogOut = () => {
+    auth.LogOut();
+    navigate("/");
+  };
 
-    return (
-        <div>
-        <h2>MY PROFILE PAGE</h2>
-        <p>Welcome:{auth.user} </p>
+  return (
+    <>
+      <div className="main-div">
+        <h1>MY PROFILE PAGE</h1>
+        <p>Welcome {auth.user} </p>
 
-        <button onClick={handleLogOut}>Log Out</button>
+        <hr />
+          <div className="profile-page">
+            <h4>NAME: {auth.user}</h4>
+
+            <div className="my-img">
+              <img src="https://t4.ftcdn.net/jpg/00/97/00/09/360_F_97000908_wwH2goIihwrMoeV9QF3BW6HtpsVFaNVM.jpg" />
+            </div>
+            <div className="my-container">
+              <h6>About You</h6>
+              <h6>Detials</h6>
+              <h6>Know More</h6>
+          </div>
         </div>
-    )
+        {/* <div className="btn-div"> */}
+        <button onClick={handleLogOut} className="log-out-btn">
+          Log Out
+        </button>
+      {/* </div> */}
+      </div>
+      
+    </>
+  );
 }
 
 export default Profile;

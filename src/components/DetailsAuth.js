@@ -4,7 +4,7 @@ import {useAuth} from "./UseAuth"
 import { useLocation } from 'react-router-dom'
 
 
-export const DetailsAuth =( {children}) => {
+export const DetailsAuth =({children}) => {
     const auth = useAuth()
     const location = useLocation()
 
@@ -12,4 +12,4 @@ export const DetailsAuth =( {children}) => {
         return <Navigate to="/LogIn" state={{path: location.pathname}}/>
     }
     return children
-}
+};

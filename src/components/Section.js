@@ -29,7 +29,7 @@ function Section() {
         )}
 
         {!auth.user && (
-          <NavLink to="/about">
+          <NavLink to="/Users">
             <Button
               className="btns"
               buttonStyle="btn--primary"

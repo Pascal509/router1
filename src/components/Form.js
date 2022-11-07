@@ -22,7 +22,7 @@ const Form = validate => {
 
         setErrors(validate(user))
     };
-    return { handleChange, user,handleLogIn, errors}
+    return { handleChange, user,handleLogIn, email, errors}
 
 }
 export default Form;

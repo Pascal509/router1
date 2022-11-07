@@ -5,12 +5,7 @@ import "./Navbar.css";
 import { Button } from "./Button";
 
 function Navbar() {
-  const navLinkStyles = ({ isActive }) => {
-    return {
-      fontweight: isActive ? "bold" : "normal",
-      // textDecoration: isActive ? "none" : "underline",
-    };
-  };
+
 
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
@@ -38,7 +33,7 @@ function Navbar() {
     <>
       <nav className="navbar">
         <nav className="main-nav">
-          <NavLink style={navLinkStyles} to="/" className="navbar-logo">
+          <NavLink to="/" className="navbar-logo">
             User_Auth <i class="fa-sharp fa-solid fa-users" />
           </NavLink>
           <div className="menu-icon" onClick={handleClick}>
@@ -47,7 +42,6 @@ function Navbar() {
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
               <NavLink
-                style={navLinkStyles}
                 to="/"
                 className="nav-links"
                 onClick={closeMobileMenu}
@@ -57,7 +51,6 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <NavLink
-                style={navLinkStyles}
                 to="/Users"
                 className="nav-links"
                 onClick={closeMobileMenu}
@@ -67,7 +60,6 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <NavLink
-                style={navLinkStyles}
                 to="/Profile"
                 className="nav-links"
                 onClick={closeMobileMenu}
@@ -77,26 +69,24 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <NavLink
-                style={navLinkStyles}
                 to="/Profile"
                 className="nav-links-mobile"
                 onClick={closeMobileMenu}
               >
                 SIGN IN
               </NavLink>
-              {!auth.user && (
+              {/* {!auth.user && (
                 <NavLink
-                  style={navLinkStyles}
-                  to="/LogIn"
+                  to="/"
                   className="nav-links-mobile"
                   onClick={closeMobileMenu}
                 >
                   SIGN IN
                 </NavLink>
-              )}
+              )} */}
             </li>
           </ul>
-          {button && <Button buttonStyle="btn--outline">SIGN IN</Button>}
+          {/* {button && <Button buttonStyle="btn--outline">SIGN IN</Button>} */}
         </nav>
       </nav>
     </>
