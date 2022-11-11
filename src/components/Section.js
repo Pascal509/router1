@@ -27,18 +27,6 @@ function Section() {
             </Button>
           </NavLink>
         )}
-
-        {!auth.user && (
-          <NavLink to="/Users">
-            <Button
-              className="btns"
-              buttonStyle="btn--primary"
-              buttonSize="btn--large"
-            >
-              GET TO KNOW US MORE
-            </Button>
-          </NavLink>
-        )}
       </div>
     </div>
   );

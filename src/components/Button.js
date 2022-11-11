@@ -2,9 +2,7 @@ import React from "react";
 import "./Button.css";
 import { NavLink } from "react-router-dom";
 
-
-
-const STYLES = ["btn--primary", "btn--outline"];
+const STYLES = ["btn--outline"];
 const SIZES = ["btn--medium", "btn--large"];
 
 export const Button = ({
@@ -21,7 +19,7 @@ export const Button = ({
   const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
   return (
-    <NavLink to="/Profile" className="btn-mobile">
+    <NavLink to="/LogIn" className="btn-mobile">
       <button
         className={`btn ${checkButtonStyle} ${checkButtonSize}`}
         onClick={onClick}

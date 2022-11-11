@@ -15,7 +15,7 @@ const SingleUser = () => {
 
   const {
     gender: gender,
-    email: email,
+    password: password,
     picture: { large },
     name: { first, last },
   } = NewArray;
@@ -26,7 +26,7 @@ const SingleUser = () => {
         <img src={large} />
         <p>{`FullName: ${first} ${last}`}</p>
         <p>{`Gender: ${gender}`}</p>
-        <p>{`Email: ${email}`}</p>
+        <p>{`password: ${password}`}</p>
 
         <Link to="/Users">back to users</Link>
       </div>

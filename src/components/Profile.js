@@ -16,11 +16,10 @@ function Profile() {
     <>
       <div className="main-div">
         <h1>MY PROFILE PAGE</h1>
-        <p>Welcome {auth.user} </p>
+        <h2> WELCOME {auth.user} </h2>
 
         <hr />
           <div className="profile-page">
-            <h4>NAME: {auth.user}</h4>
 
             <div className="my-img">
               <img src="https://t4.ftcdn.net/jpg/00/97/00/09/360_F_97000908_wwH2goIihwrMoeV9QF3BW6HtpsVFaNVM.jpg" />
@@ -37,8 +36,7 @@ function Profile() {
         </button>
       {/* </div> */}
       </div>
-      
-    </>
+      </>
   );
 }
 

@@ -9,7 +9,7 @@ const NotFound = () => {
             <h1> oooopps...</h1>
             <h2>Page Not Found</h2>
 
-            <p>Go Back To <NavLink to="/"><a></a>Home</NavLink> Page</p>
+            <p>Go Back To <NavLink to="/">Home</NavLink> Page</p>
         </div>
     )
 }

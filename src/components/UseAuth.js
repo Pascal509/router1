@@ -4,28 +4,28 @@ import { createContext, useState, useContext} from "react";
 
 
 
-const AuthContext = createContext(null);
+const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
 
-  const LogIn = (user) => {
+  const LogIn = (user, password) => {
     setUser(user);
-    setEmail(email);
     setPassword(password);
   };
+  const SignIn = (user) => {
+    setUser(user);
+  };
+
   const LogOut = () => {
     setUser(null);
-    setEmail(null);
     setPassword(null);
-    
   }
 
   
   return (
-    <AuthContext.Provider value={{ user, email, password, LogIn, LogOut }}>
+    <AuthContext.Provider value={{ user, password, LogIn, LogOut, SignIn }}>
       {children}
     </AuthContext.Provider>
   );

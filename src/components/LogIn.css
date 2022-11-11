@@ -82,6 +82,12 @@ input::placeholder {
     cursor: pointer;
 }
 
+.form-input-login {
+    padding: 20px;
+    justify-content: center;
+    margin-left: 10px;
+}
+
 .horizontal-rule{
     width: 90%;
     height:0.3rem;

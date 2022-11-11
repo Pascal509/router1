@@ -1,24 +1,22 @@
-import React from 'react'
+import React from "react";
 
 
-function Validation(user) {
-    let errors = {}
+function Validation(values) {
+    const errors = {};
 
-    if(!user.username.trim()) {
+    if(!values.username.trim()) {
         errors.username = "Username required"
     }
-    // Email
-    if(!user.email) {
-        errors.email = "Email required"
-    }
 
-    if(!user.password) {
+    if(!values.password) {
         errors.password = "Password is required"
-    } else if (user.password.length < 6) {
+    } else if (values.password.length < 6) {
         errors.password = 'Password needs to be 6 characters or more';
     }
 
     return errors;
 }
+
+
 
 export default Validation
